@@ -15939,16 +15939,6 @@ retryBtn.addEventListener('click', getUserLocationAndInitMap);
                 })
                 : null;
         }
-                    },
-                    () => {}, // Ignora erros silenciosamente
-                    {
-                        enableHighAccuracy: true,
-                        maximumAge: 0,        // Sempre posição fresca durante navegação
-                        timeout: 5000         // Timeout curto para respostas rápidas
-                    }
-                );
-            }
-        }
 
         // Stop navigation tracking
         function stopNavigationTracking() {
