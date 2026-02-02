@@ -4643,7 +4643,8 @@
                 // Carrega scripts em paralelo para maior velocidade
                 await Promise.all([
                     loadScript('https://cdn.jsdelivr.net/npm/mapbox-gl@3.4.0/dist/mapbox-gl.min.js'),
-                    loadScript('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2'),
+                    // IMPORTANT: use UMD build so it exposes window.supabase in the browser
+                    loadScript('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js'),
                     loadScript('https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js'),
                     loadScript('https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js')
                 ]);
